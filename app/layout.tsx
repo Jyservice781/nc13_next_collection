@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>paran</title>
+        <title>paranmanzang</title>
       </head>
       <body className={inter.className}>
         <NavBar />

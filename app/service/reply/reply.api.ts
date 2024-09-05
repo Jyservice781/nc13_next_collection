@@ -1,11 +1,12 @@
-export async function insert(hotel: HotelModel): Promise<any | {status:number}> {
+export async function insert(reply: ReplyModel): Promise<any | {status:number}> {
   // 실행
   try {
     const body = {
-      id: hotel.id,
-      name: hotel.name,
+      id: reply.id,
+      title: reply.score,
+      content: reply.roomType
     };
-    const response = await fetch('http://localhost:8080/hotels', {
+    const response = await fetch('http://localhost:8080/replies', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', // JSON 소문자로 수정
